@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B88B9E142730262D00BE3124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88B9E132730262D00BE3124 /* AppDelegate.swift */; };
-		B88B9E182730262D00BE3124 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88B9E172730262D00BE3124 /* ViewController.swift */; };
+		B88B9E182730262D00BE3124 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88B9E172730262D00BE3124 /* LoginController.swift */; };
 		B88B9E1D2730262E00BE3124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B88B9E1C2730262E00BE3124 /* Assets.xcassets */; };
 		B88B9E202730262E00BE3124 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B88B9E1E2730262E00BE3124 /* LaunchScreen.storyboard */; };
 		B88B9E2A2730293200BE3124 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88B9E292730293200BE3124 /* LoginPageView.swift */; };
@@ -17,12 +17,14 @@
 		B88B9E31273137EC00BE3124 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88B9E30273137EC00BE3124 /* MainButton.swift */; };
 		B88B9E33273139B700BE3124 /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88B9E32273139B700BE3124 /* LinkButton.swift */; };
 		B88B9E352731452300BE3124 /* RegisterPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88B9E342731452300BE3124 /* RegisterPageView.swift */; };
+		B88B9E372731856E00BE3124 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88B9E362731856E00BE3124 /* ResetPasswordView.swift */; };
+		B88B9E392732B28500BE3124 /* RecoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88B9E382732B28500BE3124 /* RecoverController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B88B9E102730262D00BE3124 /* MVVM-pattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-pattern.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B88B9E132730262D00BE3124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B88B9E172730262D00BE3124 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B88B9E172730262D00BE3124 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B88B9E1C2730262E00BE3124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B88B9E1F2730262E00BE3124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B88B9E212730262E00BE3124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		B88B9E30273137EC00BE3124 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		B88B9E32273139B700BE3124 /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
 		B88B9E342731452300BE3124 /* RegisterPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageView.swift; sourceTree = "<group>"; };
+		B88B9E362731856E00BE3124 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		B88B9E382732B28500BE3124 /* RecoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +80,11 @@
 		B88B9E2D27312DD900BE3124 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B88B9E172730262D00BE3124 /* ViewController.swift */,
+				B88B9E172730262D00BE3124 /* LoginController.swift */,
+				B88B9E382732B28500BE3124 /* RecoverController.swift */,
 				B88B9E292730293200BE3124 /* LoginPageView.swift */,
 				B88B9E342731452300BE3124 /* RegisterPageView.swift */,
+				B88B9E362731856E00BE3124 /* ResetPasswordView.swift */,
 				B88B9E2B2730FBAC00BE3124 /* TitleAndIconView.swift */,
 				B88B9E2E27312DFF00BE3124 /* InputTextField.swift */,
 				B88B9E30273137EC00BE3124 /* MainButton.swift */,
@@ -158,11 +164,13 @@
 			files = (
 				B88B9E2F27312DFF00BE3124 /* InputTextField.swift in Sources */,
 				B88B9E31273137EC00BE3124 /* MainButton.swift in Sources */,
-				B88B9E182730262D00BE3124 /* ViewController.swift in Sources */,
+				B88B9E182730262D00BE3124 /* LoginController.swift in Sources */,
+				B88B9E372731856E00BE3124 /* ResetPasswordView.swift in Sources */,
 				B88B9E33273139B700BE3124 /* LinkButton.swift in Sources */,
 				B88B9E142730262D00BE3124 /* AppDelegate.swift in Sources */,
 				B88B9E2C2730FBAC00BE3124 /* TitleAndIconView.swift in Sources */,
 				B88B9E352731452300BE3124 /* RegisterPageView.swift in Sources */,
+				B88B9E392732B28500BE3124 /* RecoverController.swift in Sources */,
 				B88B9E2A2730293200BE3124 /* LoginPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

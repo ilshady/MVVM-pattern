@@ -10,38 +10,39 @@ import UIKit
 class LoginPageView: UIView {
     
 //MARK: Views
-    internal var titleView: TitleAndIconView  {
+    let titleView: TitleAndIconView = {
         let title = TitleAndIconView()
-        title.translatesAutoresizingMaskIntoConstraints = false
-        return title
-    }
-    
-    private let emailTextField: InputTextField = {
-        let text = InputTextField()
         
+        return title
+    }()
+    
+    let emailTextField: InputTextField = {
+        let text = InputTextField()
+        text.setRightImage(image: #imageLiteral(resourceName: "email"))
         return text
     }()
     
-    private let passwordTextField: InputTextField = {
+    let passwordTextField: InputTextField = {
         let text = InputTextField()
         text.placeholder = "Password"
+        text.setRightImage(image: #imageLiteral(resourceName: "password"))
         return text
     }()
     
-    private let loginButton: MainButton = {
+    let loginButton: MainButton = {
         let button = MainButton()
-        
         return button
     }()
     
-    private let registerButton: LinkButton = {
+    let registerButton: LinkButton = {
         let button = LinkButton()
         return button
     }()
     
-    private let forgetButton: LinkButton = {
+    let forgetButton: LinkButton = {
         let button = LinkButton()
         button.setTitle("Forgot your password?", for: .normal)
+        button.setTitleColor(#colorLiteral(red: 0.6907229424, green: 0.5062624216, blue: 0.9193312526, alpha: 1), for: .normal)
         return button
     }()
     
@@ -50,7 +51,7 @@ class LoginPageView: UIView {
 //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .darkGray
+        backgroundColor = #colorLiteral(red: 0.1049660668, green: 0.1099768803, blue: 0.1184420511, alpha: 1)
         layoutSetup()
     }
     
@@ -61,9 +62,9 @@ class LoginPageView: UIView {
 //MARK: Layout
     private func layoutSetup() {
         
-        stackView.axis  = NSLayoutConstraint.Axis.vertical
-        stackView.distribution  = UIStackView.Distribution.equalSpacing
-        stackView.alignment = UIStackView.Alignment.center
+        stackView.axis  = .vertical
+        stackView.distribution  = .equalSpacing
+        stackView.alignment = .center
         stackView.spacing   = 10.0
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -82,26 +83,18 @@ class LoginPageView: UIView {
             
             emailTextField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
             emailTextField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
-            emailTextField.heightAnchor.constraint(equalToConstant: 40),
+            emailTextField.heightAnchor.constraint(equalToConstant: 56),
             
             passwordTextField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
             passwordTextField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 40),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 56),
             
             loginButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
             loginButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
-            loginButton.heightAnchor.constraint(equalToConstant: 40),
+            loginButton.heightAnchor.constraint(equalToConstant: 56),
 
         ])
     }
 }
 
-//MARK: Extension
 
-extension UITextField {
-    func setPadding(_ amount: CGFloat) {
-        let padding = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
-        self.leftView = padding
-        self.leftViewMode = .always
-    }
-}

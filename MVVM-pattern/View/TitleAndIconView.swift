@@ -11,15 +11,18 @@ class TitleAndIconView: UIView {
     
     private let iconImageView: UIImageView = {
         let image = UIImageView()
-        image.image = #imageLiteral(resourceName: "logo-only")
+        image.image = #imageLiteral(resourceName: "E")
+        image.tintColor = #colorLiteral(red: 0.9862437844, green: 0.4731853008, blue: 0.6882672906, alpha: 1)
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
     
-    private let pageNameLabel: UILabel = {
+    let pageNameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.text = "Login"
+        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        label.font = .boldSystemFont(ofSize: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -41,8 +44,8 @@ class TitleAndIconView: UIView {
         
         NSLayoutConstraint.activate([
             iconImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            iconImageView.heightAnchor.constraint(equalToConstant: 40),
-            iconImageView.widthAnchor.constraint(equalToConstant: 40),
+            iconImageView.heightAnchor.constraint(equalToConstant: 90),
+            iconImageView.widthAnchor.constraint(equalToConstant: 90),
             iconImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 40),
 
             pageNameLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 20),

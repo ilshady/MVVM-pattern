@@ -7,9 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginController: UIViewController {
     
-    let loginView = LoginPageView()
+    let loginView = ResetPasswordView()
     
     override func loadView() {
         self.view = loginView

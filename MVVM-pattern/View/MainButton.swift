@@ -11,11 +11,13 @@ class MainButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = 28
+        self.clipsToBounds = true
         self.layer.masksToBounds = true
         self.backgroundColor = .systemPink
         self.translatesAutoresizingMaskIntoConstraints = false
         self.setTitle("Login", for: .normal)
+        self.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
     }
     
     required init?(coder: NSCoder) {
